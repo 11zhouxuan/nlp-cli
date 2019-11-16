@@ -17,6 +17,10 @@ setup(
     description = 'A scaffold for several NLP tasks',
     packages = find_packages(where='.', exclude=(), include=('*',)),
     long_description = read('README.md'),
+    install_requires=[
+        'jinja2',
+        'pyyaml'
+    ],
     license = 'MIT',
     python_requires = '>=3.5',
     entry_points = {
