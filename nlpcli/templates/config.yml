@@ -1,0 +1,12 @@
+task_type: {{task_type}}
+project_name: {{project_name}}
+data_path:
+    path_train:
+    path_dev:
+    path_test:
+
+#model_params:
+
+
+
+

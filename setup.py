@@ -16,6 +16,9 @@ setup(
     author_email = '15110180025@fudan.edu.cn',
     description = 'A scaffold for several NLP tasks',
     packages = find_packages(where='.', exclude=(), include=('*',)),
+    package_data = {
+        "":['*.yml','*.yaml']
+    },
     long_description = read('README.md'),
     install_requires=[
         'jinja2',
