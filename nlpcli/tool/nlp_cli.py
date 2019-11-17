@@ -36,7 +36,7 @@ def parse_args():
 def distribute_from_templates(args):
 
     """
-    从模版文件总进行分发
+    从模版文件处进行分发
     :param args:
     :return:
     """
