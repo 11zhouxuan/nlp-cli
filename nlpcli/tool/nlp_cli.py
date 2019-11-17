@@ -3,8 +3,8 @@
 # @Time : 2019/11/13 20:10 
 # @Author : by 周旋 
 # @File : nlp_cli.py 
-# @Software: PyCharm
-# plt.switch_backend('Qt5Agg')
+
+
 
 import argparse
 import os
