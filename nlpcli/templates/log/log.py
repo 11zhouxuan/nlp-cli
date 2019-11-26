@@ -14,9 +14,9 @@
 import os
 import sys
 try:
-    print(sg)
     from loguru import logger
-    loguru_format ='<green>{time:YYYY-MM-DD HH:mm:ss}</green>|<b>process_id: {process}</b>| <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>'
+    loguru_format ='<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <b>process_id: {process}</b> | <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>'
+    logger.remove(0) # 去掉自带的logger,防止窗口打印出来的与写入文本的不一致
 except:
     import logging
     logging_format = "%(asctime)s |process_id: %(process)d | %(levelname)s | %(filename)s: %(funcName)s :%(lineno)d -  %(message)s"
@@ -26,9 +26,11 @@ if not os.path.exists(abs_path_dir + "/log_debug"):
     os.mkdir(abs_path_dir + "/log_debug")
 if not os.path.exists(abs_path_dir + "/log_info"):
     os.mkdir(abs_path_dir + "/log_info")
-path_debug = abs_path_dir + f"/log_debug/process_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
-path_info = abs_path_dir + f"/log_info/process_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
+
 __author_name__ = "_".join("{{author_name}}".strip().split()) # 处理作者名称
+path_debug = abs_path_dir + f"/log_debug/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
+path_info = abs_path_dir + f"/log_info/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
+
 
 def get_logger(file_name = '', level = 0):
 
@@ -48,7 +50,7 @@ def get_logger(file_name = '', level = 0):
 
 
 if 'loguru_format' in locals():
-    # TODO loguru format 控制台输出进程号
+    logger.add(sys.stderr,level=0,format = loguru_format)
     logger.add(path_info,encoding = 'utf-8',level='INFO',format=loguru_format)
     logger.add(path_debug,encoding = 'utf-8',level='DEBUG',format=loguru_format)
     # logger.add(sys.stdout,encoding = 'utf-8',level= 0,format=loguru_format)
@@ -58,5 +60,5 @@ else:
 
 
 if __name__ == '__main__':
-    logger.info('sg')
+    logger.debug('sg')
 
