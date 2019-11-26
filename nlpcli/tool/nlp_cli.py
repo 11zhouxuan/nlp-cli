@@ -4,8 +4,6 @@
 # @Author : by 周旋 
 # @File : nlp_cli.py 
 
-
-
 import argparse
 import os
 from jinja2 import Template
@@ -30,6 +28,14 @@ def parse_args():
     author_email = input('author email: ')
     args['author_email'] = author_email
 
+    tokenizer_type_choices = ['bert','ernie','xlnet','none']
+    while True:
+        tokenizer_type = input(f"tokenizer type, choices:  {str(tokenizer_type_choices)}, it is can be constom if none is choosed")
+        if tokenizer_type in tokenizer_type_choices:
+            args['tokenizer_type'] = tokenizer_type
+            break
+        print('The tokenizer type mush be in choices, please re-enter')
+
     args['create_time'] = time.strftime("%Y/%m/%d %H:%M", time.localtime())
 
     distribute_from_templates(args)
@@ -49,6 +55,7 @@ def distribute_from_templates(args):
         with open(path_sorce,'r',encoding='utf-8') as f:
             r = f.read()
         template = Template(r)
+        args['file_name'] = os.path.basename(path_target)
         r_render =  template.render(**args)
         with open(path_target,'w',encoding='utf-8') as f:
             f.write(r_render)
@@ -61,10 +68,10 @@ def distribute_from_templates(args):
     _render_one_file(os.path.join(path_templates,'log.py'), os.path.join(path_project,'log.py'))
 
     # 处理input文件
-    os.mkdir(os.path.join(path_project,'input'))
-    _render_one_file(os.path.join(path_templates,'input','__init__.py'),os.path.join(path_project,'input','__init__.py'))
-    _render_one_file(os.path.join(path_templates,'input','DataProcessing.py'),os.path.join(path_project,'input','DataProcessing.py'))
-    _render_one_file(os.path.join(path_templates,'input','txt2example.py'),os.path.join(path_project,'input','txt2example.py'))
+    os.mkdir(os.path.join(path_project,'input_mod'))
+    _render_one_file(os.path.join(path_templates,'input_mod','__init__.py'),os.path.join(path_project,'input_mod','__init__.py'))
+    _render_one_file(os.path.join(path_templates,'input_mod','dataprocessing.py'),os.path.join(path_project,'input_mod','dataprocessing.py'))
+    _render_one_file(os.path.join(path_templates,'input_mod','txt2example.py'),os.path.join(path_project,'input_mod','txt2example.py'))
 
     # 处理model文件
     _render_one_file(os.path.join(path_templates,'model','model.py'),os.path.join(path_project,'model.py'))
