@@ -14,6 +14,7 @@
 import os
 import sys
 try:
+    print(sdf)
     from loguru import logger
     loguru_format ='<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <b>process_id: {process}</b> | <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>'
     logger.remove(0) # 去掉自带的logger,防止窗口打印出来的与写入文本的不一致
@@ -32,19 +33,29 @@ path_debug = abs_path_dir + f"/log_debug/{__author_name__}_{os.getpid()}_time_{t
 path_info = abs_path_dir + f"/log_info/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
 
 
-def get_logger(file_name = '', level = 0):
+def get_logger(file_name = ''):
 
-    # 输入到文件
-    fileHandle = logging.FileHandler(file_name,'a',encoding="utf-8")
+    # 输入到INFO文件
+    fileHandleInfo = logging.FileHandler(path_info,'a',encoding="utf-8")
     fmt = logging.Formatter(fmt = logging_format)
-    fileHandle.setFormatter(fmt)
+    fileHandleInfo.setFormatter(fmt)
+    fileHandleInfo.setLevel(20)
+
+    # 输入到DEBUG文件
+    fileHandleDebug = logging.FileHandler(path_debug,'a',encoding="utf-8")
+    fmt = logging.Formatter(fmt = logging_format)
+    fileHandleDebug.setFormatter(fmt)
+    fileHandleDebug.setLevel(10)
+
     # 输入到控制台
     consoleHandle = logging.StreamHandler()
     consoleHandle.setFormatter(fmt)
+    consoleHandle.setLevel(0)
 
     # 定义日志
-    logger = logging.Logger(__author_name__,level=level)
-    logger.addHandler(fileHandle)
+    logger = logging.Logger(__author_name__)
+    logger.addHandler(fileHandleInfo)
+    logger.addHandler(fileHandleDebug)
     logger.addHandler(consoleHandle)
     return logger
 
@@ -55,10 +66,10 @@ if 'loguru_format' in locals():
     logger.add(path_debug,encoding = 'utf-8',level='DEBUG',format=loguru_format)
     # logger.add(sys.stdout,encoding = 'utf-8',level= 0,format=loguru_format)
 else:
-    # TODO 目前logging的日志只能保存一个INFO级别的信息
-    logger = get_logger(path_info,level=20)
+    #
+    logger = get_logger()
 
 
 if __name__ == '__main__':
     logger.debug('sg')
-
+    logger.info('sef')
