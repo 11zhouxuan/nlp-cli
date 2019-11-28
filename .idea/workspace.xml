@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705d9175-dd22-432e-a302-affa7c1cdbb7" name="Default" comment="second">
+      <change beforePath="" afterPath="$PROJECT_DIR$/nlpcli/templates/batch_generator/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/nlpcli/templates/batch_generator.py" afterPath="$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py" />
       <change beforePath="$PROJECT_DIR$/nlpcli/templates/log/log.py" afterPath="$PROJECT_DIR$/nlpcli/templates/log/log.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +20,7 @@
     <SUITE FILE_PATH="coverage/NLP_cli$log__1_.coverage" NAME="log (1) Coverage Results" MODIFIED="1574819189602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nlpcli/templates/log" />
     <SUITE FILE_PATH="coverage/NLP_cli$log.coverage" NAME="log Coverage Results" MODIFIED="1574761473704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nlpcli/templates" />
     <SUITE FILE_PATH="coverage/NLP_cli$setup.coverage" NAME="setup Coverage Results" MODIFIED="1573646163724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NLP_cli$batch_generator__1_.coverage" NAME="batch_generator (1) Coverage Results" MODIFIED="1574908742316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nlpcli/templates/batch_generator" />
     <SUITE FILE_PATH="coverage/NLP_cli$config_test.coverage" NAME="config_test Coverage Results" MODIFIED="1574479183514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nlpcli/templates" />
     <SUITE FILE_PATH="coverage/NLP_cli$nlp_cli.coverage" NAME="nlp_cli Coverage Results" MODIFIED="1573918797002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nlpcli/tool" />
   </component>
@@ -36,13 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="log.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#246#255#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="batch_generator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+              <folding>
+                <element signature="e#145#156#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,6 +156,7 @@
         <option value="$PROJECT_DIR$/nlpcli/templates/log.py" />
         <option value="D:/Anaconda2.3-python3.4/envs/NLP-cli/Lib/site-packages/loguru/_logger.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/log/log.py" />
+        <option value="$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py" />
       </list>
     </option>
   </component>
@@ -222,53 +239,14 @@
               <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
+              <item name="batch_generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
               <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
-              <item name="txt2example.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="log_debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="log_info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="log.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
@@ -416,11 +394,11 @@
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\tokenizers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\pycharm\NLP-cli\nlpcli\templates\batch_generator" />
+      <recent name="E:\pycharm\NLP-cli\nlpcli\templates\core" />
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\log" />
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\input_mod" />
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\globalcontrol" />
-      <recent name="E:\pycharm\NLP-cli\nlpcli\templates\predict" />
-      <recent name="E:\pycharm\NLP-cli\nlp-cli" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -435,21 +413,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.log (1)">
-    <configuration name="batch_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.batch_generator (1)">
+    <configuration name="batch_generator (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nlpcli/templates" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nlpcli/templates/batch_generator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NLP-cli" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nlpcli/templates/batch_generator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -618,19 +596,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.batch_generator" />
-      <item index="1" class="java.lang.String" itemvalue="Python.config_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.train" />
-      <item index="3" class="java.lang.String" itemvalue="Python.log" />
-      <item index="4" class="java.lang.String" itemvalue="Python.log (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.config_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train" />
+      <item index="2" class="java.lang.String" itemvalue="Python.log" />
+      <item index="3" class="java.lang.String" itemvalue="Python.log (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.batch_generator (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.log (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.log" />
-        <item index="2" class="java.lang.String" itemvalue="Python.config_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.train" />
-        <item index="4" class="java.lang.String" itemvalue="Python.batch_generator" />
+        <item index="0" class="java.lang.String" itemvalue="Python.batch_generator (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.log (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.log" />
+        <item index="3" class="java.lang.String" itemvalue="Python.config_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>
@@ -675,7 +653,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51466995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40831295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40831295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52689487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26432434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -987,14 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/batch_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -1185,10 +1155,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#246#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+          <folding>
+            <element signature="e#145#156#0" expanded="true" />
           </folding>
         </state>
       </provider>

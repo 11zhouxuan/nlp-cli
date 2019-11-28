@@ -59,7 +59,6 @@ def get_logger(file_name = ''):
     logger.addHandler(consoleHandle)
     return logger
 
-
 if 'loguru_format' in locals():
     logger.add(sys.stderr,level=0,format = loguru_format)
     logger.add(path_info,encoding = 'utf-8',level='INFO',format=loguru_format)
