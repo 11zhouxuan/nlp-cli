@@ -52,6 +52,9 @@ class TokenizerBase():
             if isinstance(field,dict):
                 if len(field.keys())>1:
                     raise ValueError('Field have one more key: {0}'.format(str(field)))
+                for bound_field in bound_fields.values():
+                    if bound_field not in expand_fn:
+                        raise ValueError('Field in value of dict must be in expand_fn: {0}'.format(str(field)))
                 bound_fields.append(field)
             elif isinstance(field,str):
                 single_fields.append(field)
@@ -70,17 +73,17 @@ class Tokenizer(TokenizerBase):
         if hasattr(self._tokenizer,'tokenize'):
             raise ValueError('tokenizer must have a tokenize method')
 
-        self._fields =  DP.fields
-        {% if task_type == "sl" -%}
-        self.tokenize_domain = DP.config['TaskInput']['TokenizeDomainHeader'] # label 依照哪一个进行token化
-        self.label = [f for f in self._fields if f.startswith('label_')]
-
-        if len(self.label)>1:
-            raise ValueError('There are two or more fields start with "label_", which is not allow in sequence labeling')
-        self.tag_scheme =  DP.config['TaskInput']['TagScheme'] #
-        if self.tag_scheme not in ['BIO','BIOES']:
-            raise ValueError('tag scheme must be BIO or BIOES, current scheme is {0}'.format(self.tag_scheme))
-        {% endif %}
+        # self._fields =  DP.fields
+        # {% if task_type == "sl" -%}
+        # self.tokenize_domain = DP.config['TaskInput']['TokenizeDomainHeader'] # label 依照哪一个进行token化
+        # self.label = [f for f in self._fields if f.startswith('label_')]
+        # 
+        # if len(self.label)>1:
+        #     raise ValueError('There are two or more fields start with "label_", which is not allow in sequence labeling')
+        # self.tag_scheme =  DP.config['TaskInput']['TagScheme'] #
+        # if self.tag_scheme not in ['BIO','BIOES']:
+        #     raise ValueError('tag scheme must be BIO or BIOES, current scheme is {0}'.format(self.tag_scheme))
+        # {% endif %}
 
     def _tokenize_one_sample(self,example,single_fields,bound_fields,expand_fn):
 
@@ -118,30 +121,30 @@ class Tokenizer(TokenizerBase):
                     example[i+'_tokenized'] += expand_fn[i](v_domain,t[k+1])
 
 
-    def _tokenize_sequence_labelling_one_sample(self,example,single_fields,bound_fields):
+    # def _tokenize_sequence_labelling_one_sample(self,example,single_fields,bound_fields):
+    #
+    #
+    #     example[self.tokenize_domain+'_tokenized'] = []
+    #
+    #     example[self.label+'_tokenized'] = []
+    #     for feature,lable in zip([example[self.tokenize_domain],example[self.label]):
+    #         feature_after_tokenize = self._tokenizer.tokenize(feature)
+    #         example[self.tokenize_domain+'_tokenized'].append(feature_after_tokenize)
+    #         if self.tag_scheme=='BIO':
+    #             if lable in ['O','I']:
+    #                 example[self.label+'_tokenized'] = [label]*len(feature_after_tokenize)
+    #         elif self.tag_scheme=='BIOES'
 
 
-        example[self.tokenize_domain+'_tokenized'] = []
-
-        example[self.label+'_tokenized'] = []
-        for feature,lable in zip([example[self.tokenize_domain],example[self.label]):
-            feature_after_tokenize = self._tokenizer.tokenize(feature)
-            example[self.tokenize_domain+'_tokenized'].append(feature_after_tokenize)
-            if self.tag_scheme=='BIO':
-                if lable in ['O','I']:
-                    example[self.label+'_tokenized'] = [label]*len(feature_after_tokenize)
-            elif self.tag_scheme=='BIOES'
 
 
-
-
-    def _tokenize_classification_one_sample(self,example):
-
-        """
-        分类任务中的token化
-        :return:
-        """
-        pass
+    # def _tokenize_classification_one_sample(self,example):
+    #
+    #     """
+    #     分类任务中的token化
+    #     :return:
+    #     """
+    #     pass
 
 if __name__ == '__main__':
     pass

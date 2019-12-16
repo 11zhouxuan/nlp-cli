@@ -4,7 +4,7 @@
 # @Author : by {{author_name}}
 # @File : {{file_name}}
 # @Email : {{email}}
-
+from log import logger
 
 if __name__ == '__main__':
     pass

@@ -6,11 +6,11 @@
 # @Email : {{email}}
 import os
 import yaml
-# from log.log import logger
+from log import logger
 #from auto_device import get_max_remain_gpu
-from input_mod.txt2example import LoadTxt
-from globalcontrol.dataprocessing import DataProcess
-from input_mod.tokennization import Tokenizer
+from input_mod import LoadTxt,Tokenizer
+from core import DataProcess
+
 DP = DataProcess()
 def main(**kwargs):
     with open('/config_test.yml') as file_config:
@@ -24,9 +24,9 @@ def main(**kwargs):
 
     # tokenization--分词
     tokenizer = Tokenizer()
-    tokenizer(train_examples,[{'text_a':['label1','label2']},'text_b'], expand_fn = {'label1':fn,})
-    tokenizer(dev_examples)
-    tokenizer(test_examples)
+    tokenizer(train_examples,)
+    tokenizer(dev_examples,)
+    tokenizer(test_examples,)
 
     # 特征提取,token转化成id
 

@@ -1,11 +1,10 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
-# @Time : 2019/11/23 11:25 
-# @Author : by 周旋 
-# @File : __init__.py.py 
-# @Software: PyCharm
-# plt.switch_backend('Qt5Agg')
-
+# @Time : {{create_time}}
+# @Author : by {{author_name}}
+# @File : {{file_name}}
+# @Email : {{email}}
+from dataprocessing import DataProcess
 
 if __name__ == '__main__':
     pass
