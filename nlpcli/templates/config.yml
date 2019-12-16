@@ -1,7 +1,7 @@
 task_type: {{task_type}}
 project_name: {{project_name}}
 TextHeaders:
-  text_a: 0 # 列的index从1开始,0 表示没有这一列
+  text_a: 0 # 列的index从1开始,0 或者False 表示没有这一列
   text_b: 0
   label: 0 # 一般需要这个字段，并且不能改成其他名字
 TaskInput:
@@ -13,6 +13,11 @@ TaskInput:
   {% endif %}
   {% if task_type == "sl" -%}
   TagScheme: "BIO" # 序列标注中的格式BIO或者 BIOES, 目前仅仅支持这两种格式
+  {% endif %}
+  {% if task_type == "sl" -%}
+  # 序列标注中的token以哪一列属性为主,这是由于用QA来做的时候有2列是要进行token化的,
+  #这时候需要与label对齐，这里默认的是第一个字段text_a
+  TokenizeDomainHeader: "text_a"
   {% endif %}
 {% if tokenizer_type == "bert" -%}
 bert_config:

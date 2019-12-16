@@ -10,9 +10,10 @@ txt to [example]
 import os
 from loguru import logger
 from ..core.dataprocessing import DataProcess
+from collections import defaultdict
 DP = DataProcess()
 
-class Example(dict):
+class Example(defaultdict(list)):
     pass
 
 class LoadTxt():

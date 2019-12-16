@@ -24,7 +24,7 @@ def main(**kwargs):
 
     # tokenization--分词
     tokenizer = Tokenizer()
-    tokenizer(train_examples)
+    tokenizer(train_examples,[{'text_a':['label1','label2']},'text_b'], expand_fn = {'label1':fn,})
     tokenizer(dev_examples)
     tokenizer(test_examples)
 

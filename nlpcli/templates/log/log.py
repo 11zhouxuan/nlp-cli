@@ -14,7 +14,6 @@
 import os
 import sys
 try:
-    print(sdf)
     from loguru import logger
     loguru_format ='<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <b>process_id: {process}</b> | <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>'
     logger.remove(0) # 去掉自带的logger,防止窗口打印出来的与写入文本的不一致
