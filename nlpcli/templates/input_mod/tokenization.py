@@ -30,7 +30,7 @@ class TokenizerBase():
         """
         raise NotImplementedError()
 
-    def __call__(self,example_list,token_fields,expand_fn = None):
+    def __call__(self,example_list,token_fields = [],expand_fn = {}):
 
         """
             :params example_list: [example] list
@@ -38,7 +38,8 @@ class TokenizerBase():
              字典表示以key为基准进行expand
             :params expand_fn expand 的方法，当token_fields 中有字典结构的时候，对应的每一个value必须有对应的函数
         """
-
+        if not token_fields:
+            raise ValueError('token_fields can not be none')
         if isinstance(expand_fn,dict):
             raise ValueError('expand_fn must be a dict：{0}'.format(str(example_fn)))
         if expand_fn:
@@ -70,6 +71,7 @@ class Tokenizer(TokenizerBase):
     def __init__(self):
 
         self._tokenizer = self.get_tokenizer()
+        DP.tokenizer = self._tokenizer
         if hasattr(self._tokenizer,'tokenize'):
             raise ValueError('tokenizer must have a tokenize method')
 
