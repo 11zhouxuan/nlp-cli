@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705d9175-dd22-432e-a302-affa7c1cdbb7" name="Default" comment="second">
+      <change afterPath="$PROJECT_DIR$/nlpcli/templates/model/model_by_tensorflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlpcli/templates/model/model_by_torch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/batch_generator/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/batch_generator/batch_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlpcli/templates/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlpcli/templates/model/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/model/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlpcli/templates/train/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/train/train.py" afterDir="false" />
     </list>
@@ -33,20 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#860#2409#0" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -54,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-694">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="297">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#150#159#0" expanded="true" />
               </folding>
@@ -64,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/__init__.py">
+        <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="42" />
+            <state relative-caret-position="413">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -81,11 +66,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+            <state relative-caret-position="-1162">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model_by_torch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-486" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model_by_tensorflow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -107,32 +108,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/txt2example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1563">
+            <state relative-caret-position="378">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#175#184#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="7" column="34" selection-start-line="6" selection-end-line="7" selection-end-column="34" />
-              <folding>
-                <element signature="e#150#181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlpcli/templates/config_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -173,13 +153,14 @@
         <option value="$PROJECT_DIR$/nlpcli/templates/core/__init__.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py" />
-        <option value="$PROJECT_DIR$/nlpcli/templates/train/train.py" />
-        <option value="$PROJECT_DIR$/nlpcli/templates/config.yml" />
         <option value="$PROJECT_DIR$/nlpcli/templates/model/model.py" />
+        <option value="$PROJECT_DIR$/nlpcli/templates/config.yml" />
+        <option value="$PROJECT_DIR$/nlpcli/templates/train/train.py" />
+        <option value="$PROJECT_DIR$/nlpcli/templates/model/model_by_tensorflow.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="200" />
@@ -258,32 +239,6 @@
               <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="batch_generator.py" type="8704e2dd:PyFileNode" />
-              <item name="BatchGenerator" type="dd8bbb05:PyElementNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dataprocessing.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dataprocessing.py" type="8704e2dd:PyFileNode" />
-              <item name="DataProcess" type="dd8bbb05:PyElementNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="input_mod" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,15 +248,6 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="input_mod" type="462c0819:PsiDirectoryNode" />
               <item name="tokenization.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
-              <item name="tokenization.py" type="8704e2dd:PyFileNode" />
-              <item name="Tokenizer" type="dd8bbb05:PyElementNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
@@ -319,6 +265,13 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="input_mod" type="462c0819:PsiDirectoryNode" />
               <item name="txt2example.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
@@ -349,6 +302,31 @@
               <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="model_by_tensorflow.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="model_by_tensorflow.py" type="8704e2dd:PyFileNode" />
+              <item name="Model" type="dd8bbb05:PyElementNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="model_by_torch.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="train" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,102 +336,6 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="train.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="-2092342425" type="70582d5e:PySkeletonsNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="-2092342425" type="70582d5e:PySkeletonsNode" />
-              <item name="builtins.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="-2092342425" type="70582d5e:PySkeletonsNode" />
-              <item name="builtins.py" type="8704e2dd:PyFileNode" />
-              <item name="str" type="dd8bbb05:PyElementNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="__init__.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="pickle.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="__init__.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (NLP-cli) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="pickle.py" type="8704e2dd:PyFileNode" />
             </path>
           </expand>
           <select />
@@ -493,6 +375,8 @@
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\globalcontrol" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pycharm\NLP-cli\nlpcli\templates\model" />
+      <recent name="E:\pycharm\NLP-cli\nlpcli\templates\train" />
       <recent name="E:\pycharm\NLP-cli\nlpcli\templates\tokenizers" />
     </key>
   </component>
@@ -757,7 +641,7 @@
       <workItem from="1576226520565" duration="3490000" />
       <workItem from="1576380500615" duration="12824000" />
       <workItem from="1576573983970" duration="14013000" />
-      <workItem from="1577064462810" duration="10712000" />
+      <workItem from="1577064462810" duration="13091000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1573896822614</created>
@@ -770,7 +654,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41598000" />
+    <option name="totallyTimeSpent" value="43977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -785,7 +669,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18986486" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18986486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -875,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -934,9 +811,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="e#150#166#0" expanded="true" />
+            <element signature="e#263#670#0" />
+            <element signature="e#1963#2488#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/train/train_using_tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model_by_torch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/txt2example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1563">
+        <state relative-caret-position="378">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#175#184#0" expanded="true" />
@@ -954,20 +858,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/train/train.py">
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-694">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="e#150#159#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="-1162">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -978,22 +879,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py">
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="297">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
-            <element signature="e#150#166#0" expanded="true" />
-            <element signature="e#263#670#0" />
-            <element signature="e#1963#2488#0" />
+            <element signature="e#150#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model.py">
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/model/model_by_tensorflow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
         </state>
       </provider>
     </entry>

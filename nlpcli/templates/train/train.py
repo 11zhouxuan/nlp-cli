@@ -10,6 +10,8 @@ from log import logger
 #from auto_device import get_max_remain_gpu
 from input_mod import LoadTxt,Tokenizer
 from core import DataProcess,BatchGenerator
+from model import Model
+import json
 DP = DataProcess()
 DP.logger = logger
 def main(**kwargs):
@@ -34,35 +36,37 @@ def main(**kwargs):
     DP.token_to_id(DP._vocab,fields = [],example_lists = [train_examples,dev_examples,test_examples]) # fields 一般是以_tokenized 后缀的字段
     DP.token_to_id(DP._label_map,fields = [], example_lists = [train_examples,dev_examples,test_examples])
 
-    # 分别将example_list送入到生成器中
 
-    train_data = BatchGenerator(train_examples,
+    # 打印当前参数
+    js = json.dumps(config, indent= 4,separators=(',',':'))
+    logger.info('当前的配置参数为:\n {0}'.format(js))
+
+
+
+    # 分别将example_list送入到生成器中
+    data_train = BatchGenerator(train_examples,
                    batch_size = config['TrainParamaters']['BatchSize'],
                    data_type = 'train',
                    shuffle = True,
                    fields = [])
-    dev_data = BatchGenerator(dev_examples,
+    data_dev = BatchGenerator(dev_examples,
                    batch_size = config['EvaluateParameters'],
                    data_type = 'test',
                    shuffle = False,
                    fields = [])
-    test_data = BatchGenerator(test_examples,
+    data_test = BatchGenerator(test_examples,
                    batch_size = config['EvaluateParameters'],
                    data_type = 'test',
                    shuffle = False,
                    fields = [])
 
-
-
-
-
-
-
-
-
-
-
-
+    model = Model()
+    # 模型进行fit
+    model.fit(
+        data_train  = data_train,
+        data_dev = data_dev,
+        data_test = data_test
+        )
 
 if __name__=="__main__":
     main()

@@ -30,6 +30,8 @@ TensorflowConfig:
 # 训练与测试参数
 TrainParamaters:
   BatchSize: 16
+  TotalStep: 10000
+  EvaluateEveryStep: 100 # 多少个step进行打印
 EvaluateParameters:
   BatchSize: 50
 PredictParameters:

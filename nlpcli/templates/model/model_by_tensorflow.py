@@ -9,6 +9,7 @@ abs_path_dir = os.path.dirname(__file__)
 import numpy as np
 from tqdm import tqdm
 from core import DataProcess
+import tensorflow as tf
 DP = DataProcess()
 logger = DP.logger
 
@@ -20,9 +21,15 @@ class Model():
         self._set_inputs_and_label_var()
         self._build_model()
 
+        # tensorflow 相关操作
+        config = tf.ConfigProto()
+        config.gpu_options.allow_growth = True
+        self.sess = tf.Session(config = config)
+        self.train_op = self._get_train_op()
+        self._add_summary() # 可视化
         # 参数重建
         self._parameters_restore()
-
+        
     def _set_dropout_var(self):
 
         """
@@ -57,6 +64,13 @@ class Model():
         :return: 
         """
         raise NotImplementedError()
+    def _get_train_op(self):
+        
+        """
+        得到训练的op
+        :return: 
+        """
+        raise NotImplementedError()
 
     def _build_model(self):
 
@@ -64,7 +78,23 @@ class Model():
         模型的实现阶段
         :return:
         """
+
         raise NotImplementedError()
+
+    def fit(self,data_train  = None, data_dev = None, data_test = None):
+
+        """
+        训练函数
+        :param data_train:  训练集, 生成器
+        :param data_dev: 验证集, 生成器
+        :param data_test: 测试集, 生成器
+        :return:
+        """
+
+        raise NotImplementedError()
+
+
+    
 
 if __name__ == '__main__':
     pass

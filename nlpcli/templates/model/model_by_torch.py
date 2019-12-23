@@ -22,7 +22,7 @@ class Model():
 
         # 参数重建
         self._parameters_restore()
-
+        
     def _set_dropout_var(self):
 
         """
