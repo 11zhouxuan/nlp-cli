@@ -1,9 +1,9 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
-# @Time : {{create_time}}
-# @Author : by {{author_name}}
-# @File : {{file_name}}
-# @Email : {{email}}
+# @Time : 2019/12/24 19:23
+# @Author : by dh
+# @File : batch_generator.py
+# @Email : 
 import math
 import time
 import numpy as np
@@ -123,4 +123,3 @@ if __name__ == '__main__':
             time.sleep(2)
         except StopIteration:
             break
-

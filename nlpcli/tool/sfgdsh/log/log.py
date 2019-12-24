@@ -1,9 +1,9 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
-# @Time : {{create_time}}
-# @Author : by {{author_name}}
-# @File : {{file_name}}
-# @Email : {{email}}
+# @Time : 2019/12/24 19:23
+# @Author : by dh
+# @File : log.py
+# @Email : 
 """
 日志配置模块,提供两种方式,
 1.自带的logging
@@ -27,7 +27,7 @@ if not os.path.exists(abs_path_dir + "/log_debug"):
 if not os.path.exists(abs_path_dir + "/log_info"):
     os.mkdir(abs_path_dir + "/log_info")
 
-__author_name__ = "_".join("{{author_name}}".strip().split()) # 处理作者名称
+__author_name__ = "_".join("dh".strip().split()) # 处理作者名称
 path_debug = abs_path_dir + f"/log_debug/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
 path_info = abs_path_dir + f"/log_info/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
 

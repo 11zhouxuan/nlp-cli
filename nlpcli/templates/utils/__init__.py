@@ -1,10 +1,10 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
-# @Time : 2019/11/23 11:27 
-# @Author : by 周旋 
-# @File : __init__.py.py 
-# @Software: PyCharm
-# plt.switch_backend('Qt5Agg')
+# @Time : {{create_time}}
+# @Author : by {{author_name}}
+# @File : {{file_name}}
+# @Email : {{email}}
+
 
 
 
