@@ -1,9 +1,26 @@
 task_type: {{task_type}}
 project_name: {{project_name}}
 # 数据的存放路径
-path_train: ''
-path_dev: ''
-path_test: ''
+PathTrain: ''
+PathDev: ''
+PathTest: ''
+# 大的数据集集缓存设置
+DataCache:
+  # 是否利用缓存数据, 如果设置就可以用下面的地址进行数据初始化
+  UseCachedData: False
+  CachedPathTrain: '' # 训练集的缓存路径
+  CachedPathDev: '' # 验证集缓存路径
+  CachedPathTest: '' # 测试集缓存路径
+  # 对于缓存数据,如果没那么大就直接加载到内存,这样可以实现shuffle
+  # 可选单位 ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
+  CachedDataThresholdSize: 100M
+
+  # 是否缓存当前的训练数据, 如果设置成True,那么当前的训练数据送到生成器之前为str形式
+  # 如果不指定缓存路径,默认将缓存当在 DataCache 路径下面
+  CachingCurrentData: False #
+  CachingDirectory: 'DataCache' # 缓存文件夹, 默认在config对应的下面
+  MaxCaching: 5 # 最大缓存的文件夹数量,注意每次缓存都会产生一个文件夹,超过最大值会进行对之前的进行删除
+
 TextHeaders:
   text_a: 0 # 列的index从1开始,0 或者False 表示没有这一列
   text_b: 0

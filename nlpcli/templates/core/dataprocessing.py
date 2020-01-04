@@ -7,6 +7,10 @@
 import threading
 import json
 import pickle
+import os
+import datetime
+import shutil
+
 class DataProcess():
 
     def __new__(cls, *args, **kwargs):
@@ -25,7 +29,7 @@ class DataProcess():
         return DataProcess._instance
 
     def __init__(self):
-        pass
+        self._current_train_epoch = 0
     def _load_json(self,path):
 
         """
@@ -105,6 +109,126 @@ class DataProcess():
                     e[field + '_ids'] = [voc[i] for i in e[field]]
         for example_list in example_lists:
             [_token_to_ids_one_example(e) for e in example_list]
+
+
+    def _example_serializer(self, exexample_list,file_name = ''):
+
+        """
+        将example序列化
+        写入的规则每一个example先用pickle序列化,然后再已行行写到文本里去
+        :param exexample_list: [example1,example2,...]
+        :param file_name: 保存的名称
+        :return:
+        """
+        with open(file_name,'wb') as f:
+            f.write(b'\n'.join([pickle.dumps(e) for e in exexample_list]))
+    def _example_inverse_serializer(self,file_handle):
+
+        """
+        :param file:
+        :return:
+        """
+        lines = file_handle.readlines()
+        examples = [pickle.loads(line) for line in lines]
+        file_handle.close()
+        return examples
+
+    def _example_inverse_serializer_by_batch(self,file_handle,batch_size = 16,is_train = True):
+
+        """
+        逐个batch进行反序列化
+        :param file_handle: 文件句柄
+        :param batch_size: int
+        :param is_train: train 要进行循环
+        :return:
+        """
+        examples = []
+        while batch_size:
+            try:
+                line = next(file_handle)
+                e = pickle.loads(line)
+                examples.append(e)
+            except StopIteration:
+                # 循环到底了
+                if is_train:
+                    self._current_train_epoch += 1
+                    self.logger.critical('当前训练集已经经过了{0}epoch'.format(self._current_train_epoch))
+                    # 关闭之前的file_handle,并重新打开新的handel
+                    file_handle.close()
+                    file_handle = open(file_handle.name,'rb')
+                    continue
+                else:
+                    break
+            batch_size -=1
+        return examples,file_handle
+
+
+    def example_data_cache(self,example_dict={},MaxCaching= 5,CachingDirectory= 'DataCache'):
+
+        """
+        对于example进行缓存
+        :param example_dict: {'train':example_train,'dev':example_dev,...}
+        :param MaxCaching: int 文件夹中的最大缓存数量
+        :param CachingDirectory: 缓存的路径
+        :return:
+        """
+        
+        # 检查当前的路径情况
+        path_cache = os.path.join(self.abs_path,CachingDirectory)
+        if not os.path.exists(path_cache):
+            # 处理缓存路径不存在的情况
+            os.mkdir(path_cache)
+        def _check_path_cache():
+
+            """
+            检查当前缓存路径是否超过了最大的缓存数量,
+            超过了就需要就行删除
+            """
+            valid_directory = []
+            for name in os.listdir(path_cache):
+                file_path = os.path.join(path_cache,name)
+                if os.path.isdir(file_path) and not name.startswith('.') and not "__pycache__" in name:
+                    valid_directory.append({'create_time':os.path.getctime(file_path),
+                                                'path':file_path
+                                                })
+            # 删除之间的缓存路径
+            valid_directory.sort(key=lambda x:x['create_time'],reverse = True)
+            while len(valid_directory) >=MaxCaching:
+                poped_item = valid_directory.pop()
+                self.logger.info(f"正在删除缓存文件夹:\n 路径: {poped_item['path']},创建时间:{poped_item['create_time']}")
+                shutil.rmtree(['path'])
+
+        # 删除多余的缓存
+        _check_path_cache()
+
+        # 创建当前的缓存路径, 文件夹的名称是当前的进程号
+        path_cache_current = os.path.join(path_cache,str(os.getpid()))
+
+        for k,v in example_dict.items():
+            self.logger.info('正在缓存：{0}'.format(str(k)))
+            # 当前example序列化
+            self._example_serializer(v,file_name=os.path.join(path_cache_current,str(os.getpid())+ '_'+str(k)+'.record'))
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+
+
+
+
+
+
+
 
 
 

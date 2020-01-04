@@ -30,9 +30,15 @@ if not os.path.exists(abs_path_dir + "/log_info"):
 __author_name__ = "_".join("{{author_name}}".strip().split()) # 处理作者名称
 path_debug = abs_path_dir + f"/log_debug/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
 path_info = abs_path_dir + f"/log_info/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
+path_critical = abs_path_dir + f"/log_critical/{__author_name__}_{os.getpid()}_time_{time.strftime('%Y-%m-%d_%H-%M-%S')}.log"
 
 
 def get_logger(file_name = ''):
+    # 输入到 CRITICAL 文件, 该日志处理最高级别记录
+    fileHandleInfo = logging.FileHandler(path_critical,'a',encoding="utf-8")
+    fmt = logging.Formatter(fmt = logging_format)
+    fileHandleInfo.setFormatter(fmt)
+    fileHandleInfo.setLevel(50)
 
     # 输入到INFO文件
     fileHandleInfo = logging.FileHandler(path_info,'a',encoding="utf-8")
@@ -60,8 +66,10 @@ def get_logger(file_name = ''):
 
 if 'loguru_format' in locals():
     logger.add(sys.stderr,level=0,format = loguru_format)
+    logger.add(path_critical,encoding = 'utf-8',level='CRITICAL',format=loguru_format)
     logger.add(path_info,encoding = 'utf-8',level='INFO',format=loguru_format)
     logger.add(path_debug,encoding = 'utf-8',level='DEBUG',format=loguru_format)
+
     # logger.add(sys.stdout,encoding = 'utf-8',level= 0,format=loguru_format)
 else:
     #
