@@ -2,3 +2,4 @@ build/
 dist/
 nlpycli.egg-info/
 test3/
+.idea/
