@@ -8,9 +8,9 @@
 token化模块,除了用已经用的tokenizer,用户必须实现TokenizerBase中的get_tokenizer方法,
 """
 import os
-from loguru import logger
 from ..core.dataprocessing import DataProcess
 DP = DataProcess()
+logger = DP.logger
 # try:
 # {% if tokenizer_type == "bert" -%}
 #     from tokennizers.tokenizer_by_bert import FullTokenizer as _tokenizer
@@ -30,7 +30,7 @@ class TokenizerBase():
         """
         raise NotImplementedError()
 
-    def __call__(self,example_list,token_fields = [],expand_fn = {}):
+    def __call__(self,example_list,token_fields = [], expand_fn = {}):
 
         """
             :params example_list: [example] list
@@ -41,9 +41,9 @@ class TokenizerBase():
         if not token_fields:
             raise ValueError('token_fields can not be none')
         if isinstance(expand_fn,dict):
-            raise ValueError('expand_fn must be a dict：{0}'.format(str(example_fn)))
+            raise ValueError('expand_fn must be a dict：{0}'.format(str(expand_fn)))
         if expand_fn:
-            for k,v in example_fn.items():
+            for k,v in expand_fn.items():
                 if not callable(v):
                     raise ValueError('The value in example_fn musk be function: {0}'.format(expand_fn))
         single_fields = [] # 没有依赖的token字段
@@ -53,7 +53,7 @@ class TokenizerBase():
             if isinstance(field,dict):
                 if len(field.keys())>1:
                     raise ValueError('Field have one more key: {0}'.format(str(field)))
-                for bound_field in bound_fields.values():
+                for bound_field in field.values():
                     if bound_field not in expand_fn:
                         raise ValueError('Field in value of dict must be in expand_fn: {0}'.format(str(field)))
                 bound_fields.append(field)
@@ -61,7 +61,6 @@ class TokenizerBase():
                 single_fields.append(field)
             else:
                 raise ValueError('Token_fields can only include str or dict: {0}'.format(str(field)))
-
 
         [self._tokenize_one_sample(e,single_fields,bound_fields,expand_fn) for e in example_list]
 
@@ -121,8 +120,6 @@ class Tokenizer(TokenizerBase):
                 current_index = current_index+len(v_domain)
                 for k,i in enumerate(v):
                     example[i+'_tokenized'] += expand_fn[i](v_domain,t[k+1])
-
-
     # def _tokenize_sequence_labelling_one_sample(self,example,single_fields,bound_fields):
     #
     #

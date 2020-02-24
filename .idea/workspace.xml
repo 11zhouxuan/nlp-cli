@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="705d9175-dd22-432e-a302-affa7c1cdbb7" name="Default" comment="second">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/log/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/log/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/model_by_torch.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/model_by_torch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/templates/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlpcli/tool/nlp_cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/tool/nlp_cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state relative-caret-position="432">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -42,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="3078">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="e#150#159#0" expanded="true" />
               </folding>
@@ -54,16 +48,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="135" column="94" lean-forward="true" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="94" />
+            <state relative-caret-position="3510">
+              <caret line="135" column="94" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="94" />
               <folding>
                 <element signature="e#150#166#0" expanded="true" />
-                <element signature="e#263#670#0" />
-                <element signature="e#749#912#0" />
-                <element signature="e#952#1100#0" />
-                <element signature="e#1144#1924#0" />
-                <element signature="e#1963#2488#0" />
-                <element signature="e#2562#3384#0" />
               </folding>
             </state>
           </provider>
@@ -81,11 +69,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3699">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+              <folding>
+                <element signature="e#222#231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="2619">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
               <folding>
                 <element signature="e#150#161#0" expanded="true" />
               </folding>
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+            <state relative-caret-position="1161">
+              <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -105,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://D:/Anaconda2.3-python3.4/envs/NLP-cli/Lib/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="22086">
               <caret line="820" column="8" selection-start-line="820" selection-start-column="8" selection-end-line="820" selection-end-column="8" />
             </state>
           </provider>
@@ -123,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlpcli/tool/nlp_cli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="2916">
               <caret line="113" column="24" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="24" />
               <folding>
                 <element signature="e#113#128#0" expanded="true" />
@@ -163,7 +163,6 @@
         <option value="$PROJECT_DIR$/nlpcli/templates/input_mod/txt2example.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/input_mod/__init__.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/log/__init__.py" />
-        <option value="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/core/__init__.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/model/model.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/train/train.py" />
@@ -179,13 +178,14 @@
         <option value="$PROJECT_DIR$/nlpcli/templates/config.yml" />
         <option value="$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py" />
         <option value="$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py" />
+        <option value="$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="695" />
-    <option name="y" value="118" />
-    <option name="width" value="1553" />
+    <option name="y" value="115" />
+    <option name="width" value="1555" />
     <option name="height" value="840" />
   </component>
   <component name="ProjectId" id="1UsiLulcsvEBec8NIf83mqO1P9J" />
@@ -227,34 +227,7 @@
               <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="batch_generator.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="batch_generator.py" type="8704e2dd:PyFileNode" />
-              <item name="BatchGenerator" type="dd8bbb05:PyElementNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dataprocessing.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dataprocessing.py" type="8704e2dd:PyFileNode" />
-              <item name="DataProcess" type="dd8bbb05:PyElementNode" />
+              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
@@ -262,6 +235,25 @@
               <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="input_mod" type="462c0819:PsiDirectoryNode" />
+              <item name="tokenization.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
+              <item name="tokenization.py" type="8704e2dd:PyFileNode" />
+              <item name="Tokenizer" type="dd8bbb05:PyElementNode" />
+            </path>
+            <path>
+              <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="nlpcli" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="input_mod" type="462c0819:PsiDirectoryNode" />
+              <item name="tokenization.py" type="8704e2dd:PyFileNode" />
+              <item name="TokenizerBase" type="dd8bbb05:PyElementNode" />
             </path>
             <path>
               <item name="NLP-cli" type="b2602c69:ProjectViewProjectNode" />
@@ -720,7 +712,10 @@
       <workItem from="1577064462810" duration="27661000" />
       <workItem from="1577339539883" duration="1946000" />
       <workItem from="1578105028928" duration="1000" />
-      <workItem from="1578109884078" duration="16030000" />
+      <workItem from="1578109884078" duration="16476000" />
+      <workItem from="1578197204493" duration="3952000" />
+      <workItem from="1578732393312" duration="1234000" />
+      <workItem from="1582357544602" duration="538000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1573896822614</created>
@@ -733,7 +728,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76524000" />
+    <option name="totallyTimeSpent" value="82694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,7 +743,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20675676" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17297298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -867,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#860#2409#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/tokenizers/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -920,13 +905,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/tex/毕业论文/周旋博士论文ctex版本/gbk2utf_8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/tex/毕业论文/周旋博士论文ctex版本/gbk2utf_8.py" />
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -951,6 +930,64 @@
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/predict.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-2092342425/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="3653" column="36" selection-start-line="3653" selection-start-column="29" selection-end-line="3653" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#150#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3510">
+          <caret line="135" column="94" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="94" />
+          <folding>
+            <element signature="e#150#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2619">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="e#150#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda2.3-python3.4/envs/NLP-cli/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22086">
+          <caret line="820" column="8" selection-start-line="820" selection-start-column="8" selection-end-line="820" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/templates/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -958,34 +995,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2.3-python3.4/envs/NLP-cli/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="820" column="8" selection-start-line="820" selection-start-column="8" selection-end-line="820" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/log/log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlpcli/tool/nlp_cli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="2916">
           <caret line="113" column="24" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="24" />
           <folding>
             <element signature="e#113#128#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-2092342425/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="3653" column="36" selection-start-line="3653" selection-start-column="29" selection-end-line="3653" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -999,46 +1015,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/dataprocessing.py">
+    <entry file="file://$PROJECT_DIR$/nlpcli/templates/input_mod/tokenization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="135" column="94" lean-forward="true" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="94" />
+        <state relative-caret-position="3699">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
           <folding>
-            <element signature="e#150#166#0" expanded="true" />
-            <element signature="e#263#670#0" />
-            <element signature="e#749#912#0" />
-            <element signature="e#952#1100#0" />
-            <element signature="e#1144#1924#0" />
-            <element signature="e#1963#2488#0" />
-            <element signature="e#2562#3384#0" />
+            <element signature="e#222#231#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/core/batch_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="e#150#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="e#150#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlpcli/templates/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
